@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 2
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 1769360350, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: -1207137110, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: 1769307191, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: -1508805198, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: -123242483, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: 2067755621, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: 106062524, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: -297854569, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: -1329014956, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: -400557388, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: 1774802324, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: -750455503, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: 567225486, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: -1369310262, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: -969624450, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: 1960383462, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: -686595668, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: 168315498, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: -2138575184, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: -1889667672, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: 761964205, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: -595741269, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: -1072179636, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: 296241350, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: -1776357478, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: 2144883028, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  - {fileID: 1127245822, guid: 19c647b2df93da943b7317ab741cee58, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Atlas prototype 1.0_8
+  - Atlas prototype 1.0_9
+  - Atlas prototype 1.0_4
+  - Atlas prototype 1.0_5
+  - Atlas prototype 1.0_6
+  - Atlas prototype 1.0_7
+  - Atlas prototype 1.0_0
+  - Atlas prototype 1.0_1
+  - Atlas prototype 1.0_2
+  - Atlas prototype 1.0_3
+  - Atlas prototype 1.0_17
+  - Atlas prototype 1.0_16
+  - Atlas prototype 1.0_15
+  - Atlas prototype 1.0_14
+  - Atlas prototype 1.0_13
+  - Atlas prototype 1.0_12
+  - Atlas prototype 1.0_11
+  - Atlas prototype 1.0_10
+  - Atlas prototype 1.0_22
+  - Atlas prototype 1.0_23
+  - Atlas prototype 1.0_20
+  - Atlas prototype 1.0_19
+  - Atlas prototype 1.0_21
+  - Atlas prototype 1.0_18
+  - Atlas prototype 1.0_26
+  - Atlas prototype 1.0_24
+  - Atlas prototype 1.0_25
+  m_RenderDataMap: {}
+  m_Tag: Atlas
+  m_IsVariant: 0
