@@ -17,16 +17,21 @@ public class Alarm : MonoBehaviour
 
     public void Stop()
     {
-        StartCoroutine(ReduceVolume());
+        if (_targetAudio.volume != 0)
+        {
+            StartCoroutine(ReduceVolume());
+        }
     }
 
     private IEnumerator ReduceVolume()
     {
-        while(_targetAudio.volume > 0)
+        while (_targetAudio.volume != 0)
         {
             _targetAudio.volume = Mathf.MoveTowards(_targetAudio.volume, _requiredVolume, -_recoveryRate * Time.deltaTime);
 
             yield return null;
         }
+
+        StopCoroutine(ReduceVolume());
     }
 }
