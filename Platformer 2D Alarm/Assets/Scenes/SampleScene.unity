@@ -285,7 +285,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1073786864}
         m_TargetAssemblyTypeName: Alarm, Assembly-CSharp
-        m_MethodName: IncreaseVolume
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -300,7 +300,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1073786864}
         m_TargetAssemblyTypeName: Alarm, Assembly-CSharp
-        m_MethodName: StartReduceVolume
+        m_MethodName: Stop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -10,12 +10,12 @@ public class Alarm : MonoBehaviour
     [SerializeField] private float _requiredVolume;
     [SerializeField] private float _recoveryRate;
 
-    public void IncreaseVolume()
+    public void Play()
     {
         _targetAudio.volume = Mathf.MoveTowards(_targetAudio.volume, _requiredVolume, _recoveryRate * Time.deltaTime);
     }
 
-    public void StartReduceVolume()
+    public void Stop()
     {
         StartCoroutine(ReduceVolume());
     }
