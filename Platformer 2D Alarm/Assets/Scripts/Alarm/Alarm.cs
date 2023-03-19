@@ -6,42 +6,27 @@ using UnityEngine.UI;
 
 public class Alarm : MonoBehaviour
 {
+    [SerializeField] private AudioSource _targetAudio;
     [SerializeField] private float _requiredVolume;
     [SerializeField] private float _recoveryRate;
-    [SerializeField] private AudioSource _targetAudio;
 
-    private bool isExit;
-
-    private void FixedUpdate()
+    public void IncreaseVolume()
     {
-        if (isExit)
+        _targetAudio.volume = Mathf.MoveTowards(_targetAudio.volume, _requiredVolume, _recoveryRate * Time.deltaTime);
+    }
+
+    public void StartReduceVolume()
+    {
+        StartCoroutine(ReduceVolume());
+    }
+
+    private IEnumerator ReduceVolume()
+    {
+        while(_targetAudio.volume > 0)
         {
             _targetAudio.volume = Mathf.MoveTowards(_targetAudio.volume, _requiredVolume, -_recoveryRate * Time.deltaTime);
-        }
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.TryGetComponent<Player>(out Player player))
-        {
-            isExit = false;
-            _targetAudio.Play();
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.TryGetComponent<Player>(out Player player))
-        {
-            _targetAudio.volume = Mathf.MoveTowards(_targetAudio.volume, _requiredVolume, _recoveryRate * Time.deltaTime);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.TryGetComponent<Player>(out Player player))
-        {
-            isExit = true;
+            yield return null;
         }
     }
 }
