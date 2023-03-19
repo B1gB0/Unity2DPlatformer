@@ -5,23 +5,16 @@ using UnityEngine;
 
 public class Detection : MonoBehaviour
 {
-    [SerializeField] private UnityEvent _reached;
-    [SerializeField] private UnityEvent _standing;
-    [SerializeField] private UnityEvent _gone;
+    public UnityAction <float> ChangedAction;
+
+    private readonly float _minValue = 0f;
+    private readonly float _maxValue = 1f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent<Player>(out Player player))
         {
-            _reached?.Invoke();
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.TryGetComponent<Player>(out Player player))
-        {
-            _standing?.Invoke();
+            ChangedAction?.Invoke(_maxValue);
         }
     }
 
@@ -29,7 +22,7 @@ public class Detection : MonoBehaviour
     {
         if (collision.TryGetComponent<Player>(out Player player))
         {
-            _gone?.Invoke();
+            ChangedAction?.Invoke(_minValue);
         }
     }
 }

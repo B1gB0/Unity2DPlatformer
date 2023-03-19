@@ -265,51 +265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 740bf3750180b2a479bfc395b5b17813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _reached:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1073786865}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _standing:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1073786864}
-        m_TargetAssemblyTypeName: Alarm, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _gone:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1073786864}
-        m_TargetAssemblyTypeName: Alarm, Assembly-CSharp
-        m_MethodName: Stop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &109761838
 GameObject:
   m_ObjectHideFlags: 0
@@ -5471,6 +5426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetAudio: {fileID: 1073786865}
+  _detection: {fileID: 72818250}
   _requiredVolume: 1
   _recoveryRate: 0.1
 --- !u!82 &1073786865
@@ -5484,7 +5440,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 749c23edcb334d941995810ffc5fcb42, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1
   Loop: 0

@@ -7,31 +7,38 @@ using UnityEngine.UI;
 public class Alarm : MonoBehaviour
 {
     [SerializeField] private AudioSource _targetAudio;
-    [SerializeField] private float _requiredVolume;
+    [SerializeField] private Detection _detection;
     [SerializeField] private float _recoveryRate;
 
-    public void Play()
+    private Coroutine _coroutine;
+
+    private void OnEnable()
     {
-        _targetAudio.volume = Mathf.MoveTowards(_targetAudio.volume, _requiredVolume, _recoveryRate * Time.deltaTime);
+        _detection.ChangedAction += OnChangedState;
     }
 
-    public void Stop()
+    private void OnDisable()
     {
-        if (_targetAudio.volume != 0)
+        _detection.ChangedAction -= OnChangedState;
+    }
+
+    public void OnChangedState(float targetValue)
+    {
+        if (_coroutine != null)
         {
-            StartCoroutine(ReduceVolume());
+            StopCoroutine(_coroutine);
         }
+
+        _coroutine = StartCoroutine(ChangeVolume(targetValue));
     }
 
-    private IEnumerator ReduceVolume()
+    private IEnumerator ChangeVolume(float targetValue)
     {
-        while (_targetAudio.volume != 0)
+        while (_targetAudio.volume != targetValue)
         {
-            _targetAudio.volume = Mathf.MoveTowards(_targetAudio.volume, _requiredVolume, -_recoveryRate * Time.deltaTime);
+            _targetAudio.volume = Mathf.MoveTowards(_targetAudio.volume, targetValue, _recoveryRate * Time.deltaTime);
 
             yield return null;
         }
-
-        StopCoroutine(ReduceVolume());
     }
 }
