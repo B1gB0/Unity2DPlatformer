@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class Detection : MonoBehaviour
 {
-    public UnityAction <float> ChangedAction;
-
     private readonly float _minValue = 0f;
     private readonly float _maxValue = 1f;
+
+    public UnityAction <float> ChangedAction;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
